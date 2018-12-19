@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Mes héros</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <p>Liste des héros</p>
+
+    <button *ngFor="let hero of heroesList"
+            ion-button (click)="onLoadHero(hero.name)">        
+    {{ hero.name }}
+    </button>
+
+</ion-content>
+
+
+<ion-footer padding>
+    Footer
+</ion-footer>
