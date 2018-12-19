@@ -10,6 +10,7 @@ import { HeroesPage } from '../pages/heroes/heroes';
 import { SingleHeroPage } from '../pages/heroes/single-hero/single-hero';
 import { ProfilPage } from '../pages/profil/profil';
 import { TabsPage } from '../pages/tabs/tabs';
+import { HeroesService } from '../services/heroes.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { TabsPage } from '../pages/tabs/tabs';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HeroesService
   ]
 })
 export class AppModule {}
