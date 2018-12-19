@@ -7,12 +7,19 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ name }}</ion-title>
+    <ion-title>{{ hero.name }}</ion-title>
   </ion-navbar>
 
 </ion-header> 
 
 
 <ion-content padding>
-  <p>Page des caractéristiques de {{ name }}</p>
+  <ion-card>
+    <ion-card-header>{{ hero.name }}</ion-card-header>
+    <ion-card-content>
+      <p *ngFor="let line of hero.description">
+        {{ line }}
+      </p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
