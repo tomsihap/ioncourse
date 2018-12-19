@@ -8,8 +8,8 @@
 <ion-content padding>
     <p>Liste des héros</p>
 
-    <button *ngFor="let hero of heroesList"
-            ion-button (click)="onLoadHero(hero.name)">        
+    <button *ngFor="let hero of heroesList; let i = index"
+            ion-button (click)="onLoadHero(i)">        
     {{ hero.name }}
     </button>
 

@@ -22,8 +22,8 @@ export class HeroesPage {
         this.heroesList = this.heroesService.heroesList.slice();
     }
 
-    onLoadHero(name: string) {
-        this.navCtrl.push(SingleHeroPage, { heroName: name })
+    onLoadHero(i: number) {
+        this.navCtrl.push(SingleHeroPage, { index: i })
     }
 
 
